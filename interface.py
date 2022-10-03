@@ -15,7 +15,7 @@ class AnonTrade:  # Market trade
     timestamp: float
     side: str
     size: float
-    price: str
+    price: float
 
 
 @dataclass
@@ -31,8 +31,8 @@ class OwnTrade:  # Execution of own placed order
 @dataclass
 class OrderbookSnapshotUpdate:  # Orderbook tick snapshot
     timestamp: float
-    asks: list[tuple[float, float]]  # tuple[price, size]
-    bids: list[tuple[float, float]]
+    asks: list[tuple]  # tuple[price, size]
+    bids: list[tuple]
 
 
 @dataclass
