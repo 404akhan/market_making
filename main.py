@@ -1,15 +1,22 @@
 from dataclasses import dataclass
+from sortedcontainers import SortedList
 
 
-@dataclass
-class My:
-    f1: float
-    f2: int
-    f3: str
+arr = [1, 2, 3, 4]
+it = iter(arr)
 
-m = My(f2 = 1, f1 = 2.1, f3 = 'a')
+for i in range(5):
+    val = next(it)
+    print(val)
 
-print(m.f1, m.f2, m.f3)
-a = 2
-print(++a)
-print(a)
+sl = SortedList([(1, 0), (2, 3)])
+
+print(sl.pop(0))
+print(sl.pop(0))
+print(sl.pop(0))
+
+d = {'a': 1, 'c': 3}
+
+
+for v in d.values():
+    print(v)

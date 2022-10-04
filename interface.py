@@ -4,6 +4,7 @@ from typing import Optional
 
 @dataclass
 class Order:  # Our own placed order
+    timestamp: int
     order_id: int
     side: str
     size: float
@@ -12,7 +13,7 @@ class Order:  # Our own placed order
 
 @dataclass
 class AnonTrade:  # Market trade
-    timestamp: float
+    timestamp: int
     side: str
     size: float
     price: float
@@ -20,7 +21,7 @@ class AnonTrade:  # Market trade
 
 @dataclass
 class OwnTrade:  # Execution of own placed order
-    timestamp: float
+    timestamp: int
     trade_id: int
     order_id: int
     side: str
@@ -30,7 +31,7 @@ class OwnTrade:  # Execution of own placed order
 
 @dataclass
 class OrderbookSnapshotUpdate:  # Orderbook tick snapshot
-    timestamp: float
+    timestamp: int
     asks: list[tuple]  # tuple[price, size]
     bids: list[tuple]
 
