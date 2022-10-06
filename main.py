@@ -1,8 +1,12 @@
 from dataclasses import dataclass
 from sortedcontainers import SortedList
+import matplotlib.pyplot as plt
 
 
 arr = [1, 2, 3, 4]
+plt.title('he')
+plt.plot(arr, arr, '.g')
+plt.show()
 it = iter(arr)
 
 for i in range(5):
