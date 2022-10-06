@@ -1,3 +1,5 @@
+Code in `osnova.ipynb`
+
 `Simulator` class - Market simulator based on crypty (bitcoin, ethereum) market data. 
 It has API to place and cancel order, process them with predefined latency, executes them as market orders, in case of
 imediate match and places limit order otherwise. Every tick our simulator goes through new market data, and 
